@@ -1,0 +1,6 @@
+name: Stripe Terminal
+type: module
+description: Used to accept in-person payments via Stripe
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

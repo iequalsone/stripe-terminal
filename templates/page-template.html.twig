@@ -1,0 +1,65 @@
+{{ attach_library('stripe_terminal/stripe_terminal') }}
+{{ attach_library('stripe_terminal/terminal') }}
+{{ attach_library('stripe_terminal/popper') }}
+
+<div class="container mx-auto px-4">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="col-span-1">
+      <div class="row title bg-primary p-4 mb-4 text-white">Simulate reader pairing</div>
+      <div class="row margin pad">
+        <button id="discover-button" class="flex items-center p-4 mb-4 ">
+          1. Discover readers
+          <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.293 2.709A1 1 0 0 1 6.71 1.293l6.3 6.3a1 1 0 0 1 0 1.414l-6.3 6.3a1 1 0 0 1-1.416-1.416L10.884 8.3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="">
+        <button id="connect-button" class="flex items-center p-4 mb-4 ">
+          2. Connect to a reader
+          <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.293 2.709A1 1 0 0 1 6.71 1.293l6.3 6.3a1 1 0 0 1 0 1.414l-6.3 6.3a1 1 0 0 1-1.416-1.416L10.884 8.3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <hr />
+      <div class="bg-primary p-4 mb-4 text-white">Simulate a transaction</div>
+      <div class="p-4 ">Enter an amount</div>
+      <div class="">
+        <div class="">
+          <input id="amount-input" type="text" value="2000" class=" p-4 mb-4 ">
+        </div>
+      </div>
+      <div class="">
+        <button id="collect-button" class="flex items-center p-4 mb-4 ">
+          3. Collect Payment
+          <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.293 2.709A1 1 0 0 1 6.71 1.293l6.3 6.3a1 1 0 0 1 0 1.414l-6.3 6.3a1 1 0 0 1-1.416-1.416L10.884 8.3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="">
+        <button id="capture-button" class="flex items-center p-4 mb-4 ">
+          4. Capture Payment
+          <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.293 2.709A1 1 0 0 1 6.71 1.293l6.3 6.3a1 1 0 0 1 0 1.414l-6.3 6.3a1 1 0 0 1-1.416-1.416L10.884 8.3z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="col-span-1 md:col-span-3 bg-black text-white px-8 py-6 overflow-y-scroll h-136">
+      <div class="row title">Logs</div>
+      <div class="row">
+        <div class="col-sm-12" id="logs"></div>
+      </div>
+    </div>
+  </div>
+</div>

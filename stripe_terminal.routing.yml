@@ -1,0 +1,39 @@
+stripe_terminal.settings_form:
+  path: '/admin/config/system/stripe-terminal'
+  defaults:
+    _title: 'Stripe Terminal settings'
+    _form: 'Drupal\stripe_terminal\Form\SettingsForm'
+  requirements:
+    _permission: 'administer stripe_terminal configuration'
+
+stripe_terminal.page:
+  path: '/stripe-terminal'
+  defaults:
+    _title: 'Accept in-person payments'
+    _controller: '\Drupal\stripe_terminal\Controller\StripeTerminalController::build'
+  requirements:
+    _permission: 'administer stripe_terminal configuration'
+
+stripe_terminal.token:
+  path: '/stripe-terminal/token'
+  defaults:
+    _title: 'Create token'
+    _controller: '\Drupal\stripe_terminal\Controller\StripeTerminalController::token'
+  requirements:
+    _permission: 'administer stripe_terminal configuration'
+
+stripe_terminal.create:
+  path: '/stripe-terminal/create'
+  defaults:
+    _title: 'Create payment'
+    _controller: '\Drupal\stripe_terminal\Controller\StripeTerminalController::createPayment'
+  requirements:
+    _permission: 'administer stripe_terminal configuration'
+
+stripe_terminal.capture:
+  path: '/stripe-terminal/capture'
+  defaults:
+    _title: 'Capture payment'
+    _controller: '\Drupal\stripe_terminal\Controller\StripeTerminalController::capturePayment'
+  requirements:
+    _permission: 'administer stripe_terminal configuration'

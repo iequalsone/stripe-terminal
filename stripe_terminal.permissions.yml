@@ -1,0 +1,4 @@
+administer stripe_terminal configuration:
+  title: 'Administer stripe_terminal configuration'
+  description: 'Optional description.'
+  restrict access: true

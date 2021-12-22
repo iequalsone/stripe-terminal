@@ -1,0 +1,15 @@
+# Custom module library for general purposes.
+stripe_terminal:
+  js:
+    js/stripe-terminal.js: {}
+  dependencies:
+    - core/drupalSettings
+
+# Third-party library (CDN).
+terminal:
+  js:
+    https://js.stripe.com/terminal/v1/: {type: external, minified: true}
+
+popper:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js: {type: external, minified: true}
